@@ -3,9 +3,6 @@ body{
     background-attachment: fixed;
     background-position-y: 0px;
 }
-.container{
-    max-width: 1240px;
-}
 
 nav a{
     margin-left: 2%;
@@ -29,7 +26,21 @@ strong{
     to {
         backdrop-filter: blur(1px);
     }
-  }
+}
+
+.container{
+    max-width: 1240px;
+}
+
+@keyframes changeblur {
+    from {
+        backdrop-filter: blur(8px);
+    }
+  
+    to {
+        backdrop-filter: blur(1px);
+    }
+}
 
 .blur-bg{
     animation-duration: 3s;
@@ -43,7 +54,6 @@ strong{
 .bottom-footer{
     box-shadow: -10px 0px 20px 0px #c2c2c2;
 }
-
 
 .user-menu{
     border-top-right-radius: 25px;
@@ -98,7 +108,7 @@ strong{
     overflow-y: scroll;
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1440px){
     .container, .container-sm, .container-md, .container-lg, .container-xl {
         max-width: 1280px;
     }

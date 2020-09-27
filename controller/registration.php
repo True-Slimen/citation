@@ -30,14 +30,13 @@ if(isset($_POST['registration'])){
                         if($mailExist == 0){
                             if($pass == $pass2){
 
-
-
                                 $sql = $debate->prepare("INSERT INTO redactor(username, mail, password) VALUES(?, ?, ?)");
                                 $sql->execute(array($identifiant,$mail,$pass));
                                 $success = "Votre compte à bien été créé.";
-                                $_SESSION['success'] = '<div class="alert alert-dismissible alert-success">
-                                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                                <p class="mb-0">' . $success . '</p>
+                                $_SESSION['success'] = 
+                                '<div class="alert alert-dismissible alert-success">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <p class="mb-0">' . $success . '</p>
                                 </div>';
                                 header("Location: ../index.php?action=sign-in");
                                 exit;
@@ -68,9 +67,10 @@ if(isset($_POST['registration'])){
             }else{
                 $err = "Tous les champs doivent être remplis";
             }
-            $_SESSION['err'] = '<div class="alert alert-dismissible alert-danger">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <p class="mb-0">' . $err . '</p>
+            $_SESSION['err'] = 
+            '<div class="alert alert-dismissible alert-danger">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <p class="mb-0">' . $err . '</p>
             </div>';
             header("Location: ../index.php?action=sign-up");
 }

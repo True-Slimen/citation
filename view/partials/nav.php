@@ -14,7 +14,6 @@
     <a class="lien_a" href="index.php?action=home"><button class="btn btn-outline-dark" type="button">Accueil</button></a>
     <?php 
             if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
-                echo $_SESSION['loggedin'];
                 echo '<a class="lien_a" href="index.php?action=sign-out"><button class="btn btn-outline-dark" type="button">Se déconnecter</button></a>';
                 
             }else{
@@ -29,7 +28,6 @@
     <span class="col-4 text-right navbar-text">
     <?php 
             if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
-                echo $_SESSION['loggedin'];
                 echo '<a class="lien_a" href="index.php?action=userHome"><button class="btn btn-outline-dark" type="button">Mon compte</button></a>';   
             }   
         ?>
@@ -38,4 +36,4 @@
   </div>
 </nav>
 
-<?php //var_dump($_SESSION);
+<?php

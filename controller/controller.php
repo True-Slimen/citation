@@ -22,8 +22,6 @@ function help(){
 function userHome(){
     require('./controller/displayQuote.php');
     require('./view/user/userHomeView.php');
-    
-    //GetPersonnalQuote();
 }
 
 function page404(){

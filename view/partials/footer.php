@@ -1,3 +1,4 @@
+<?php ?>
 <footer class="mt-5 pt-5 pb-5 bottom-footer blur-bg">
     <section class="container"> 
         <div class="row ml-auto mr-auto">

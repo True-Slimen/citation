@@ -42,9 +42,23 @@ $title = 'S\'inscrire';
                 <button type="submit" name="registration" class="btn btn-info mt-4">S'inscrire</button>
             </form>
         </div>
-        <div class="col-md-6">
-            <h2>Lorem ipsum dolor sit.</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus officiis modi ratione quis! Tempore, dolores voluptatum! Voluptatum dignissimos aliquam mollitia quos dolores quibusdam impedit placeat, maiores nemo numquam veniam assumenda quidem repellat accusamus cum ducimus quia officiis accusantium magni quaerat? Nulla, doloremque sunt! Vero nihil, possimus similique obcaecati rem, nisi voluptate deserunt dignissimos dolores temporibus magnam officia saepe cum. Vitae molestias iusto ad delectus earum quia quam dolore, saepe eos quis nostrum rerum et ipsum aperiam.</p>
+        <div class="col-md-6 col-sm-12">
+            <h2>4 bonnes raison de vous inscrire</h2>
+            <ul>
+                <li>
+                    <i>"L'important c'est de participer"</i>
+                </li>
+                <li>
+                    "Plus on est de fou, plus on cite !"
+                </li>
+                <li>
+                    "A cheval donné, on ne regarde pas ses dents"
+                </li>
+                <li>
+                    Vous pouvez faire des notes personnel, c'est pas très pratique comme pense bête, mais ça marche !
+                </li>
+            </ul>
+            <a class="lien_a" href="index.php?action=sign-in"><button class="btn btn-info" type="button">S'inscrire</button></a>
         </div>
     </div>
     </section>

@@ -6,8 +6,6 @@
         <title><?php $title ?></title>
         <?php require('view/partials/nav.php');?>
 
-        
-
         <?php echo $content ?>
 
         <?php require('view/partials/footer.php');?>

@@ -29,9 +29,10 @@ if(isset($_POST['connection'])){
             exit;
         }else{
             $err = "Erreur dans les identifiants de connexion";
-            $_SESSION['err'] = '<div class="alert alert-dismissible alert-danger">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <p class="mb-0">' . $err . '</p>
+            $_SESSION['err'] = 
+            '<div class="alert alert-dismissible alert-danger">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <p class="mb-0">' . $err . '</p>
             </div>';
             header("Location: ../index.php?action=sign-in");
             exit;

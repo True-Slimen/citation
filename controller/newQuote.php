@@ -24,8 +24,8 @@ if(isset($_POST['newQuote'])){
             $quoteId = $debate->lastInsertId();
             if($public == true){
         
-                   $postPublicQuote = $debate->prepare("INSERT INTO public_quote(quote_id) VALUES(?)");
-                    $postPublicQuote->execute(array($quoteId));
+                $postPublicQuote = $debate->prepare("INSERT INTO public_quote(quote_id) VALUES(?)");
+                $postPublicQuote->execute(array($quoteId));
            
             }
 

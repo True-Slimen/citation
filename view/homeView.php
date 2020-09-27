@@ -1,3 +1,4 @@
+
 <?php $title = 'Accueil'; ?>
 
 <?php ob_start(); ?>
@@ -5,9 +6,9 @@
     <section class="container mt-5">
     <div class="jumbotron blur-bg">
         <h1 class="display-4">Bienvenue sur Citation !</h1>
-        <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis inventore animi distinctio et sequi, quo aut?</p>
+        <p class="lead">Catalogue participatif des meilleurs citation que l'on croise sur nos routes</p>
         <hr class="my-4">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia.</p>
+        <p>N'hésitez pas à nous rejoindre et laissez votre pierre à l'édifice.</p>
         <p class="lead">
             <a class="btn btn-outline-dark" href="index.php?action=sign-in" role="button">Inscrivez-vous !</a>
         </p>
@@ -15,50 +16,32 @@
     </section>
     <section class="container mt-5">
         <h2>Citations publiques</h2>
-        <div class="card mt-5 mb-5 blur-bg">
-            <div class="card-header">
-                Quote
-            </div>
-            <div class="card-body bg-white">
-                <blockquote class="blockquote mb-0">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
-            </div>
-        </div>
-        <div class="card mt-5 mb-5 blur-bg">
-            <div class="card-header">
-                Quote
-            </div>
-            <div class="card-body bg-white">
-                <blockquote class="blockquote mb-0">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
-            </div>
-        </div>
-        <div class="card mt-5 mb-5 blur-bg">
-            <div class="card-header">
-                Quote
-            </div>
-            <div class="card-body bg-white">
-                <blockquote class="blockquote mb-0">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
-            </div>
-        </div>
-        <div class="card mt-5 mb-5 blur-bg">
-            <div class="card-header">
-                Quote
-            </div>
-            <div class="card-body bg-white">
-                <blockquote class="blockquote mb-0">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
-            </div>
-        </div>
+        <?php 
+                     $arrayPublicQuote = $_SESSION['publicQuote'];
+                   
+
+                    for($i = 0; $i < count($arrayPublicQuote); $i++){
+                       
+                        echo 
+                       '<div class="card mt-2 mb-2 blur-bg">
+                  
+                        <div class="card-header ml-0 mr-0 row justify-content-between">
+                            <h4 class="col-7">Citation partagé par '. $arrayPublicQuote[$i][0][2] .'</h4>
+                        
+                        </div>
+                        <div class="card-body bg-white">
+                            <blockquote class="blockquote mb-0">
+                            <p>' . $arrayPublicQuote[$i][0][0] . '</p>
+                            <footer class="blockquote-footer"><cite title="Source Title">' . $arrayPublicQuote[$i][0][1]  . '</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div><br>'; 
+                    }
+                ?>
+                
+                </div>
+                
+                </div>
     </section>
     <section class="container">
         <div class="row">

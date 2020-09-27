@@ -31,14 +31,14 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                     
                     }?>
                 </h1>
-        <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis inventore animi distinctio et sequi, quo aut?</p>
-        
-        
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium totam ea, beatae ducimus maxime exercitationem fugiat et, placeat molestiae suscipit eius. Architecto, provident repellat nam, accusamus asperiores iste eos expedita exercitationem laborum, deserunt aut hic et eius facere rerum aliquam.
-       
+        <p class="lead">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis inventore animi distinctio et sequi, quo aut?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium totam ea, beatae ducimus maxime exercitationem fugiat et, placeat molestiae suscipit eius. Architecto, provident repellat nam, accusamus asperiores iste eos expedita exercitationem laborum, deserunt aut hic et eius facere rerum aliquam.
+        </p>
        <hr class="my-4">
         <div class="row">
-            
             <div class="col-12 col-md-6 border-right">
                 <h3>Nouvelle citation</h3>
                 <form action="./controller/newQuote.php" method="post">
@@ -78,16 +78,8 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                 <h3>Vos citations</h3>
                 <div class="personnal-quote-frame jumbotron">
                 <?php 
-                    // $arrayPersonnalQuote = [];
                      $arrayPersonnalQuote = $_SESSION['personnalQuote'];
-                    //  //$displayQuote = $arrayPersonnalQuote[0];
-                    //  //echo gettype($arrayPersonnalQuote);
-                    //  $length = count($arrayPersonnalQuote);
-                    //  for($i = 0; $i < count($arrayPersonnalQuote); $i++){
-                    //     print_r($arrayPersonnalQuote[$i]);
-                    // }
-
-
+    
                     for($i = 0; $i < count($arrayPersonnalQuote); $i++){
                        
                         echo 
