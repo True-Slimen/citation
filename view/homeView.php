@@ -6,11 +6,11 @@
     <section class="container mt-5">
     <div class="jumbotron blur-bg">
         <h1 class="display-4">Bienvenue sur Citation !</h1>
-        <p class="lead">Catalogue participatif des meilleurs citation que l'on croise sur nos routes</p>
+        <p class="lead">Catalogue participatif des meilleurs citations que l'on croise sur nos routes</p>
         <hr class="my-4">
         <p>N'hésitez pas à nous rejoindre et laissez votre pierre à l'édifice.</p>
         <p class="lead">
-            <a class="btn btn-outline-dark" href="index.php?action=sign-in" role="button">Inscrivez-vous !</a>
+            <a class="btn btn-outline-info" href="index.php?action=sign-up" role="button">Inscrivez-vous !</a>
         </p>
     </div>
     </section>

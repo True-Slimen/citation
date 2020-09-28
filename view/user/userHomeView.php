@@ -26,7 +26,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                 if (isset($_SESSION['username']) AND isset($_SESSION['userId'])){
                     $redactorName = $_SESSION['username'];
                          echo '<strong>';
-                         echo $redactorName . ', votre id est : ' . $_SESSION['userId'];
+                         echo $redactorName;
                          echo '</strong>';
                     
                     }?>
