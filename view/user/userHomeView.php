@@ -79,8 +79,10 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                 <div class="personnal-quote-frame jumbotron">
                 <?php 
                      $arrayPersonnalQuote = $_SESSION['personnalQuote'];
-                    $userRole = $_SESSION['role']; 
-                if($userRole = 1){
+                   if(isset($_SESSION['role'])){
+                       $userRole = $_SESSION['role']; 
+                   } 
+                if($userRole == 1){
                     for($x = 0; $x < count($arrayPersonnalQuote); $x++){
                        $status = $arrayPersonnalQuote[$x][[4][0]];
                        $quoteId = $arrayPersonnalQuote[$x][[0][0]];
