@@ -3,42 +3,42 @@
     <section class="container"> 
         <div class="row ml-auto mr-auto">
         <div class="col-md-4 col-sm-12">
-            <ul cla>
-                <a href="#">
-                    <li>Lorem ipsum dolor sit.</li>
-                </a>
-                <a href="#">
-                    <li>Lorem ipsum dolor sit.</li>
-                </a>
-                <a href="#">
-                    <li>Lorem ipsum dolor sit.</li>
-                </a>
+        <ul class="">
+                    <li>
+                        <a href="#">Lorem ipsum dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Lorem ipsum dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Lorem ipsum dolor sit.</a>
+                    </li>
             </ul>
         </div>
         <div class="col-md-4 col-sm-12">
-            <ul cla>
-                <a href="#">
-                    <li>Lorem ipsum dolor sit.</li>
-                </a>
-                <a href="#">
-                    <li>Lorem ipsum dolor sit.</li>
-                </a>
-                <a href="#">
-                    <li>Lorem ipsum dolor sit.</li>
-                </a>
+            <ul class="">
+                    <li>
+                        <a href="#">Lorem ipsum dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Lorem ipsum dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Lorem ipsum dolor sit.</a>
+                    </li>
             </ul>
         </div>
         <div class="col-md-4 col-sm-12">
-            <ul cla>
-                <a href="#">
-                    <li>Lorem ipsum dolor sit.</li>
-                </a>
-                <a href="#">
-                    <li>Lorem ipsum dolor sit.</li>
-                </a>
-                <a href="#">
-                    <li>Lorem ipsum dolor sit.</li>
-                </a>
+        <ul class="">
+                    <li>
+                        <a href="#">Lorem ipsum dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Lorem ipsum dolor sit.</a>
+                    </li>
+                    <li>
+                        <a href="#">Lorem ipsum dolor sit.</a>
+                    </li>
             </ul>
         </div>
         </div>

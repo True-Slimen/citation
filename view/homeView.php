@@ -8,7 +8,7 @@
         <h1 class="display-4">Bienvenue sur Citation !</h1>
         <p class="lead">Catalogue participatif des meilleurs citations que l'on croise sur nos routes</p>
         <hr class="my-4">
-        <p>N'hésitez pas à nous rejoindre et laissez votre pierre à l'édifice.</p>
+        <p>N'hésitez pas à nous rejoindre et laisser votre pierre à l'édifice.</p>
         <p class="lead">
             <a class="btn btn-outline-info" href="index.php?action=sign-up" role="button">Inscrivez-vous !</a>
         </p>

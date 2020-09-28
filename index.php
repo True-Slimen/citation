@@ -24,6 +24,9 @@ if (isset($_GET['action'])) {
     }elseif ($_GET['action'] == 'userHome') {
         
         UserHome();
+    }elseif ($_GET['action'] == 'page404') {
+        
+        page404();
     }
 }
 else {

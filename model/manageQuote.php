@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('../model/dbconnection.php');
+require('../database/dbconnection.php');
 
 if(isset($_POST['publish'])){
     $quoteId = htmlspecialchars($_POST['publish']);

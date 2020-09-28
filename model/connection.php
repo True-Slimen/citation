@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require('../model/dbconnection.php');
+require('../database/dbconnection.php');
 
 if(isset($_POST['connection'])){
     $identifiant = htmlspecialchars($_POST['name']);

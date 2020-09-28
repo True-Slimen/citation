@@ -29,7 +29,7 @@ $title = 'Connexion'; ?>
                 <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis inventore animi distinctio et sequi, quo aut?</p>
                 <hr class="my-4">
             
-                <form action="./controller/connection.php" method="post">
+                <form action="./model/connection.php" method="post">
                     <div class="form-group">
                         <input type="text" class="form-control" name="name" id="name" placeholder="Votre identifiant" required>
                     </div>

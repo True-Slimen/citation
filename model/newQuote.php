@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('../model/dbconnection.php');
+require('../database/dbconnection.php');
 $redactorName = $_SESSION['username'];
 
 if(isset($_POST['newQuote'])){

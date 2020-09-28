@@ -41,7 +41,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
         <div class="row">
             <div class="col-12 col-md-6 border-right">
                 <h3>Nouvelle citation</h3>
-                <form action="./controller/newQuote.php" method="post">
+                <form action="./model/newQuote.php" method="post">
                     <div class="form-group">
                         <textarea  rows="4" class="form-control" name="content" id="content" required>Votre citation</textarea> 
                     </div>
@@ -87,7 +87,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                   
                         <div class="card-header ml-0 mr-0 row justify-content-between">
                             <h4 class="col-7">Citation</h4>
-                            <form action="./controller/manageQuote.php" class="col-4 pr-0 row justify-content-between" method="post">'. $arrayPersonnalQuote[$i][2] .'
+                            <form action="./model/manageQuote.php" class="col-4 pr-0 row justify-content-between" method="post">'. $arrayPersonnalQuote[$i][2] .'
                             <button type="submit" value="'.$arrayPersonnalQuote[$i][0] .'"  name="removeQuote" class="btn btn-outline-danger">X</button>
                             </form>
                         </div>

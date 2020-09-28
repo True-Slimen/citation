@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require('../model/dbconnection.php');
+require('../database/dbconnection.php');
 
 if(isset($_POST['registration'])){
     $identifiant = htmlspecialchars($_POST['name']);
@@ -32,6 +32,14 @@ if(isset($_POST['registration'])){
 
                                 $sql = $debate->prepare("INSERT INTO redactor(username, mail, password) VALUES(?, ?, ?)");
                                 $sql->execute(array($identifiant,$mail,$pass));
+
+                                $userId = $debate->lastInsertId();
+
+                                $role = 0;
+                                $setUserRole = $debate->prepare("INSERT INTO role_user(role_user_id, redactor_id) VALUES(?, ?)");
+                                $setUserRole->execute(array($role,$userId));
+
+
                                 $success = "Votre compte à bien été créé.";
                                 $_SESSION['success'] = 
                                 '<div class="alert alert-dismissible alert-success">

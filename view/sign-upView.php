@@ -1,6 +1,6 @@
 <?php 
 $title = 'S\'inscrire'; 
-//require('./controller/registration.php');
+//require('./model/registration.php');
 ?>
 
 <?php ob_start(); ?>
@@ -21,7 +21,7 @@ $title = 'S\'inscrire';
                     }
                     $_SESSION['err'] = " ";
             ?>
-            <form action="./controller/registration.php" method="post">
+            <form action="./model/registration.php" method="post">
                 <div class="form-group">
                     <input type="text" class="form-control" name="name" id="name" placeholder="Votre identifiant" required>
                 </div>

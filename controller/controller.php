@@ -3,7 +3,7 @@ session_start();
 
 
 function home(){
-    require('./controller/displayPublicQuote.php');
+    require('./model/displayPublicQuote.php');
     require('./view/homeView.php');
 }
 
@@ -20,7 +20,7 @@ function help(){
 }
 
 function userHome(){
-    require('./controller/displayQuote.php');
+    require('./model/displayQuote.php');
     require('./view/user/userHomeView.php');
 }
 
