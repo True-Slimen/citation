@@ -79,7 +79,35 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                 <div class="personnal-quote-frame jumbotron">
                 <?php 
                      $arrayPersonnalQuote = $_SESSION['personnalQuote'];
-    
+                    $userRole = $_SESSION['role']; 
+                if($userRole = 1){
+                    for($x = 0; $x < count($arrayPersonnalQuote); $x++){
+                       $status = $arrayPersonnalQuote[$x][[4][0]];
+                       $quoteId = $arrayPersonnalQuote[$x][[0][0]];
+                        echo 
+                       '<div class="card mt-2 mb-2 blur-bg">
+                        <div class="card-header ml-0 mr-0 row justify-content-between">
+                            <h4 class="col-7">Citation</h4>
+                            <form action="./model/manageQuote.php" class="col-4 pr-0 row justify-content-between" method="post">';
+                            if( $status == false){
+                                echo '<button type="submit" name="publish" value="'.$arrayPersonnalQuote[$x][[0][0]] .'" class="btn btn-outline-success col-9">Publier</button>';
+                            }else{
+                                echo '<button type="submit" name="dispublish" value="'.$arrayPersonnalQuote[$x][[0][0]] .'" class="btn btn-outline-success col-9">Ne plus publier</button>';
+                            }
+                            echo'
+                            <button type="submit" value="'.$arrayPersonnalQuote[$x][[0][0]] .'"  name="removeQuote" class="btn btn-outline-danger">X</button>
+                            </form>
+                        </div>
+                        <div class="card-body bg-white">
+                            <blockquote class="blockquote mb-0">
+                            <p>' . $arrayPersonnalQuote[$x][[1][0]] . '</p>
+                            <footer class="blockquote-footer"><cite title="Source Title">' . $arrayPersonnalQuote[$x][[2][0]] . '</cite></footer>Partagé par  ' . $arrayPersonnalQuote[$x][[5][0]] . '
+                            </blockquote>
+                        </div>
+                    </div><br>'; 
+                    }
+                }else{
+
                     for($i = 0; $i < count($arrayPersonnalQuote); $i++){
                        
                         echo 
@@ -98,7 +126,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                             </blockquote>
                         </div>
                     </div><br>'; 
-                    }
+                    }}
                 ?>
                 
                 </div>

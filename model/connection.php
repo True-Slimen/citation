@@ -6,8 +6,7 @@ require('../database/dbconnection.php');
 if(isset($_POST['connection'])){
     $identifiant = htmlspecialchars($_POST['name']);
     $pass = sha1($_POST['password']);
-
-    if(!empty($_POST['name'] AND !empty($_POST['password']))){
+    
         $reqIdPass = $debate->prepare("SELECT * FROM redactor WHERE username = ? AND password = ?");
         $reqIdPass->execute(array($identifiant, $pass));
         $identifiantExist = $reqIdPass->rowCount();
@@ -37,5 +36,5 @@ if(isset($_POST['connection'])){
             header("Location: ../index.php?action=sign-in");
             exit;
         }
-    }
+    
 }
