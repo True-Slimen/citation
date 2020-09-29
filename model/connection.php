@@ -8,17 +8,17 @@ if(isset($_POST['connection'])){
     $pass = sha1($_POST['password']);
     
         $reqIdPass = $debate->prepare("SELECT * FROM redactor WHERE username = ? AND password = ?");
+        
         $reqIdPass->execute(array($identifiant, $pass));
         $identifiantExist = $reqIdPass->rowCount();
 
+        while($userId = $reqIdPass->fetch()){
+            $result = $userId['id'];
+        }
+
         if($identifiantExist == 1){
             $identifiantHTML = $identifiant;
-            
-            $getId = $debate->query("SELECT * FROM redactor WHERE username = '$identifiant'");
-    
-            while($userId = $getId->fetch()){
-                $result = $userId['id'];
-            }
+
             $userId = intval($result);
               
             $_SESSION['userId']= $userId;
