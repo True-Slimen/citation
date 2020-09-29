@@ -36,12 +36,13 @@ $title = 'Connexion'; ?>
                     <div class="form-group mb-2">
                         <input type="password" class="form-control" name="password" id="password" placeholder="Votre mot de passe" required>
                     </div>
-                    <button type="submit" name="connection" class="btn btn-info mt-4">Se connecter</button>
+                    <button type="submit" name="connection" class="btn btn-info mt-4 mb-4">Se connecter</button>
                 </form>
         </div>
         <div class="col-md-6">
             <h2>Lorem ipsum dolor sit.</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus officiis modi ratione quis! Tempore, dolores voluptatum! Voluptatum dignissimos aliquam mollitia quos dolores quibusdam impedit placeat, maiores nemo numquam veniam assumenda quidem repellat accusamus cum ducimus quia officiis accusantium magni quaerat? Nulla, doloremque sunt! Vero nihil, possimus similique obcaecati rem, nisi voluptate deserunt dignissimos dolores temporibus magnam officia saepe cum. Vitae molestias iusto ad delectus earum quia quam dolore, saepe eos quis nostrum rerum et ipsum aperiam.</p>
+            <p class="mt-3 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus officiis modi ratione quis! Tempore, dolores voluptatum! Voluptatum dignissimos aliquam mollitia quos dolores quibusdam impedit placeat, maiores nemo numquam veniam assumenda.</p>
+            <p class="mt-3 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus officiis modi ratione quis! Tempore, dolores voluptatum! Voluptatum dignissimos aliquam mollitia quos dolores quibusdam impedit placeat, maiores nemo numquam veniam assumenda.</p>
         </div>
     </section>
 <?php

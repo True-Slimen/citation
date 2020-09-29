@@ -5,20 +5,32 @@
         <div class="col-md-4 col-sm-12">
         <ul class="">
                     <li>
-                        <a href="#">Lorem ipsum dolor sit.</a>
+                    <a class="lien_a" href="index.php?action=home">Accueil</a>
                     </li>
                     <li>
-                        <a href="#">Lorem ipsum dolor sit.</a>
+                    <?php 
+                        if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+                            echo '<a class="lien_a" href="index.php?action=sign-out">Se déconnecter</a>';
+                            
+                        }else{
+                            echo '<a class="lien_a" href="index.php?action=sign-up">S\'inscrire</a>';
+                            echo '<a class="lien_a" href="index.php?action=sign-in">Se connecter</a>';
+                        }    
+                    ?>
                     </li>
                     <li>
-                        <a href="#">Lorem ipsum dolor sit.</a>
+                    <?php 
+                        if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+                            echo '<a class="lien_a" href="index.php?action=userHome">Mon compte</a>';   
+                        }   
+                    ?>
                     </li>
             </ul>
         </div>
         <div class="col-md-4 col-sm-12">
             <ul class="">
                     <li>
-                        <a href="#">Lorem ipsum dolor sit.</a>
+                        <a class="lien_a" href="index.php?action=help">Aide</a>
                     </li>
                     <li>
                         <a href="#">Lorem ipsum dolor sit.</a>

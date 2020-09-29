@@ -26,9 +26,6 @@
            array_push($arrayPersonnalQuote, $allQuote);
         }
         $status = $arrayPersonnalQuote[0][[4][0]];
-        print_r($arrayPersonnalQuote);
-        echo '<br>';
-        print_r($arrayPersonnalQuote[0][[2][0]]);
     }else{
         $getPersonnalQuote = $debate->query("SELECT id, content, author, create_at, public FROM quote WHERE redactor_id = '$userId'");
 

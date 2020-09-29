@@ -45,20 +45,20 @@ $title = 'S\'inscrire';
         <div class="col-md-6 col-sm-12">
             <h2>4 bonnes raison de vous inscrire</h2>
             <ul>
-                <li>
+                <li class="mt-3">
                     <i>"L'important c'est de participer"</i>
                 </li>
-                <li>
-                    "Plus on est de fou, plus on cite !"
+                <li class="mt-3">
+                    <i>"Plus on est de fou, plus on cite !"</i>
                 </li>
-                <li>
-                    "A cheval donné, on ne regarde pas ses dents"
+                <li class="mt-3">
+                    <i>"A cheval donné, on ne regarde pas ses dents"</i>
                 </li>
-                <li>
-                    Vous pouvez faire des notes personnel, c'est pas très pratique comme pense bête, mais ça marche !
+                <li class="mt-3">
+                    <i>Vous pouvez faire des notes personnel, c'est pas très pratique comme pense bête, mais ça marche !</i>
                 </li>
             </ul>
-            <a class="lien_a" href="index.php?action=sign-in"><button class="btn btn-info" type="button">S'inscrire</button></a>
+            <a class="lien_a" href="index.php?action=sign-in"><button class="btn btn-info" type="button">Se connecter</button></a>
         </div>
     </div>
     </section>

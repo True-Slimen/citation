@@ -20,7 +20,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
             <button type="button" class="btn btn-info col-12 third-user-btn">Button</button>
         </div>
     </div>
-    <div class="col-9 col-md-10">
+    <div class=" pannel-container col-12 col-md-10">
         <h1 class="display-4">Bienvenue sur votre pannel
             <?php 
                 if (isset($_SESSION['username']) AND isset($_SESSION['userId'])){
@@ -74,7 +74,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
         </div>
                 </form>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="quote-container col-12 col-md-6">
                 <h3>Vos citations</h3>
                 <div class="personnal-quote-frame jumbotron">
                 <?php 
@@ -89,15 +89,15 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                         echo 
                        '<div class="card mt-2 mb-2 blur-bg">
                         <div class="card-header ml-0 mr-0 row justify-content-between">
-                            <h4 class="col-7">Citation</h4>
-                            <form action="./model/manageQuote.php" class="col-4 pr-0 row justify-content-between" method="post">';
+                            <h4 class="col-md-7 col-sm-5">Citation</h4>
+                            <form action="./model/manageQuote.php" class="col-md-5 col-sm-6 pr-0 row justify-content-between" method="post">';
                             if( $status == false){
-                                echo '<button type="submit" name="publish" value="'.$arrayPersonnalQuote[$x][[0][0]] .'" class="btn btn-outline-success col-9">Publier</button>';
+                                echo '<button type="submit" name="publish" value="'.$arrayPersonnalQuote[$x][[0][0]] .'" class="btn btn-outline-success col-xs-12">Publier</button>';
                             }else{
-                                echo '<button type="submit" name="dispublish" value="'.$arrayPersonnalQuote[$x][[0][0]] .'" class="btn btn-outline-success col-9">Ne plus publier</button>';
+                                echo '<button type="submit" name="dispublish" value="'.$arrayPersonnalQuote[$x][[0][0]] .'" class="btn btn-outline-success col-xs-12">Ne plus publier</button>';
                             }
                             echo'
-                            <button type="submit" value="'.$arrayPersonnalQuote[$x][[0][0]] .'"  name="removeQuote" class="btn btn-outline-danger">X</button>
+                            <button type="submit" value="'.$arrayPersonnalQuote[$x][[0][0]] .'"  name="removeQuote" class="btn btn-outline-danger col-xs-12">X</button>
                             </form>
                         </div>
                         <div class="card-body bg-white">
@@ -135,7 +135,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                 
             </div>
         </div>
-            <a class="btn btn-outline-dark" href="index.php?action=sign-out" role="button">Se déconnecter</a>
+            <a class="btn btn-dark" href="index.php?action=sign-out" role="button">Se déconnecter</a>
         </p>
         </div>
     </div>

@@ -15,7 +15,7 @@
     </div>
     </section>
     <section class="container mt-5">
-        <h2>Citations publiques</h2>
+        <h2 class="mb-4">Citations publiques</h2>
         <?php 
                      $arrayPublicQuote = $_SESSION['publicQuote'];
                    
@@ -26,7 +26,7 @@
                        '<div class="card mt-2 mb-2 blur-bg">
                   
                         <div class="card-header ml-0 mr-0 row justify-content-between">
-                            <h4 class="col-7">Citation partagé par '. $arrayPublicQuote[$i][0][2] .'</h4>
+                            <h4 class="col-12">Citation partagé par '. $arrayPublicQuote[$i][0][2] .'</h4>
                         
                         </div>
                         <div class="card-body bg-white">
@@ -45,13 +45,13 @@
     </section>
     <section class="container">
         <div class="row">
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4 col-sm-12 mt-3">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ipsa molestiae, fuga dolore temporibus magnam. Earum cum ipsam, asperiores aspernatur officia, illum eum omnis dignissimos assumenda unde molestias tenetur sed debitis odit hic suscipit eligendi est ullam facilis totam deleniti laboriosam culpa vel aliquid! Dignissimos enim eaque minima aut suscipit velit totam obcaecati modi dolore quae? Neque possimus nostrum dolore?
         </div>
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4 col-sm-12 mt-4">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ipsa molestiae, fuga dolore temporibus magnam. Earum cum ipsam, asperiores aspernatur officia, illum eum omnis dignissimos assumenda unde molestias tenetur sed debitis odit hic suscipit eligendi est ullam facilis totam deleniti laboriosam culpa vel aliquid! Dignissimos enim eaque minima aut suscipit velit totam obcaecati modi dolore quae? Neque possimus nostrum dolore?
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-12 mt-4">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ipsa molestiae, fuga dolore temporibus magnam. Earum cum ipsam, asperiores aspernatur officia, illum eum omnis dignissimos assumenda unde molestias tenetur sed debitis odit hic suscipit eligendi est ullam facilis totam deleniti laboriosam culpa vel aliquid! Dignissimos enim eaque minima aut suscipit velit totam obcaecati modi dolore quae? Neque possimus nostrum dolore?
         </div>
         </div>
