@@ -9,8 +9,6 @@ if(isset($_POST['registration'])){
     $mail = htmlspecialchars($_POST['email']);
     $pass = $_POST['password'] . $prefixe;
     $pass2 = $_POST['password2']. $prefixe;
-    $bigpass =$pass;
-    $bigpass2 =$pass2;
     $hashedpass = hash('sha512', $pass);
     $hashedpass2 = hash('sha512', $pass2);
     
@@ -49,7 +47,7 @@ if(isset($_POST['registration'])){
                                 $_SESSION['success'] = 
                                 '<div class="alert alert-dismissible alert-success">
                                     <button type="button" class="close" data-dismiss="alert">&times;</button>
-                                    <p class="mb-0">' . $success . '<br>'. $bigpass .'<br>'. $bigpass2 .'</p>
+                                    <p class="mb-0">' . $success . '</p>
                                 </div>';
                                 header("Location: ../index.php?action=sign-in");
                                exit;

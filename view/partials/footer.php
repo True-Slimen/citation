@@ -53,7 +53,7 @@
                     </li>
             </ul>
         </div>
-        <small class="ml-auto mr-auto"><i>Slimen Metatidj - Avec peu de php saupoudré d'attention</i></small>
+        <small class="ml-auto mr-auto"><i>Slimen Metatidj - Avec un peu de php saupoudré de café</i></small>
         </div>
     </section>
 </footer>
