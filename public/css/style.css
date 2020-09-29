@@ -18,6 +18,10 @@ strong{
     font-weight: bold!important;
 }
 
+.username{
+    text-transform: capitalize ;
+}
+
 @keyframes changeblur {
     from {
         backdrop-filter: blur(8px);

@@ -25,7 +25,10 @@
         while($allQuote = $getAllQuote->fetch()){
            array_push($arrayPersonnalQuote, $allQuote);
         }
-        $status = $arrayPersonnalQuote[0][[4][0]];
+        if($arrayPersonnalQuote){
+         $status = $arrayPersonnalQuote[0][[4][0]];
+        }
+        
     }else{
         $getPersonnalQuote = $debate->query("SELECT id, content, author, create_at, public FROM quote WHERE redactor_id = '$userId'");
 

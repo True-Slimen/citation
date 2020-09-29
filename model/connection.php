@@ -3,13 +3,16 @@ session_start();
 
 require('../database/dbconnection.php');
 
-if(isset($_POST['connection'])){
+// Get fields value, if exist and not empty
+if(isset($_POST['connection']) AND (!empty($_POST['name']) && !empty($_POST['password']))){
     $identifiant = htmlspecialchars($_POST['name']);
-    $pass = sha1($_POST['password']);
+    $prefixe = 'solide96*';
+    $pass = $_POST['password']. $prefixe;
+    $hashedpass = hash('sha512', $pass);
     
         $reqIdPass = $debate->prepare("SELECT * FROM redactor WHERE username = ? AND password = ?");
         
-        $reqIdPass->execute(array($identifiant, $pass));
+        $reqIdPass->execute(array($identifiant, $hashedpass));
         $identifiantExist = $reqIdPass->rowCount();
 
         while($userId = $reqIdPass->fetch()){
@@ -35,6 +38,12 @@ if(isset($_POST['connection'])){
             </div>';
             header("Location: ../index.php?action=sign-in");
             exit;
-        }
-    
-}
+        }   
+}$err = "Tout les champs doivent être remplis";
+    $_SESSION['err'] = 
+    '<div class="alert alert-dismissible alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <p class="mb-0">' . $err . '</p>
+    </div>';
+    header("Location: ../index.php?action=sign-in");
+    exit;

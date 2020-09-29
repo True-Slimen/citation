@@ -4,10 +4,15 @@ session_start();
 require('../database/dbconnection.php');
 
 if(isset($_POST['registration'])){
+    $prefixe = 'solide96*';
     $identifiant = htmlspecialchars($_POST['name']);
     $mail = htmlspecialchars($_POST['email']);
-    $pass = sha1($_POST['password']);
-    $pass2 = sha1($_POST['password2']);
+    $pass = $_POST['password'] . $prefixe;
+    $pass2 = $_POST['password2']. $prefixe;
+    $bigpass =$pass;
+    $bigpass2 =$pass2;
+    $hashedpass = hash('sha512', $pass);
+    $hashedpass2 = hash('sha512', $pass2);
     
 
     
@@ -28,10 +33,10 @@ if(isset($_POST['registration'])){
                         $reqMail->execute(array($mail));
                         $mailExist = $reqMail->rowCount();
                         if($mailExist == 0){
-                            if($pass == $pass2){
+                            if($hashedpass == $hashedpass2){
 
                                 $sql = $debate->prepare("INSERT INTO redactor(username, mail, password) VALUES(?, ?, ?)");
-                                $sql->execute(array($identifiant,$mail,$pass));
+                                $sql->execute(array($identifiant,$mail,$hashedpass));
 
                                 $userId = $debate->lastInsertId();
 
@@ -44,10 +49,10 @@ if(isset($_POST['registration'])){
                                 $_SESSION['success'] = 
                                 '<div class="alert alert-dismissible alert-success">
                                     <button type="button" class="close" data-dismiss="alert">&times;</button>
-                                    <p class="mb-0">' . $success . '</p>
+                                    <p class="mb-0">' . $success . '<br>'. $bigpass .'<br>'. $bigpass2 .'</p>
                                 </div>';
                                 header("Location: ../index.php?action=sign-in");
-                                exit;
+                               exit;
                             }else{
                                 $err = "Vos mots de passes ne correspondent pas.";
                                 

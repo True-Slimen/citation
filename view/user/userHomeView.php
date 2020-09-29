@@ -25,7 +25,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
             <?php 
                 if (isset($_SESSION['username']) AND isset($_SESSION['userId'])){
                     $redactorName = $_SESSION['username'];
-                         echo '<strong>';
+                         echo '<strong class="username">';
                          echo $redactorName;
                          echo '</strong>';
                     
@@ -116,8 +116,8 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                        '<div class="card mt-2 mb-2 blur-bg">
                   
                         <div class="card-header ml-0 mr-0 row justify-content-between">
-                            <h4 class="col-7">Citation</h4>
-                            <form action="./model/manageQuote.php" class="col-4 pr-0 row justify-content-between" method="post">'. $arrayPersonnalQuote[$i][2] .'
+                            <h4 class="col-md-7 col-sm-5">Citation</h4>
+                            <form action="./model/manageQuote.php" class="col-md-5 col-sm-6 pr-0 row justify-content-between" method="post">'. $arrayPersonnalQuote[$i][2] .'
                             <button type="submit" value="'.$arrayPersonnalQuote[$i][0] .'"  name="removeQuote" class="btn btn-outline-danger">X</button>
                             </form>
                         </div>
