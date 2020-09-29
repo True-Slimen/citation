@@ -1,5 +1,5 @@
 <?php ?>
-<footer class="mt-5 pt-5 pb-5 bottom-footer blur-bg">
+<footer class="mt-5 pt-4 pb-4 bottom-footer blur-bg">
     <section class="container"> 
         <div class="row ml-auto mr-auto">
         <div class="col-md-4 col-sm-12">
@@ -53,6 +53,7 @@
                     </li>
             </ul>
         </div>
+        <small class="ml-auto mr-auto"><i>Slimen Metatidj - Avec peu de php saupoudré d'attention</i></small>
         </div>
     </section>
 </footer>

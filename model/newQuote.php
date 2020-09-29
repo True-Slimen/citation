@@ -29,7 +29,7 @@ if(isset($_POST['newQuote'])){
            
             }
 
-            $success = 'Citation ajouté';
+            $success = 'Citation ajoutée';
             $_SESSION['loggedin']= true;
             $_SESSION['userId']= $userId;
             $_SESSION['success'] = 
@@ -40,7 +40,7 @@ if(isset($_POST['newQuote'])){
            header("Location: ../index.php?action=userHome");
            exit;
 
-        }$err = "Pas de nom utilisateur";
+        }$err = "Pas de nom d'utilisateur";
         $_SESSION['err'] = 
         '<div class="alert alert-dismissible alert-danger">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
